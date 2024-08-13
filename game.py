@@ -387,7 +387,7 @@ class MyGame(arcade.Window):
                     card.position = pile.position
                     top_card = self.piles[pile_index][-1]
                     # Move card to card list
-                    if self.legal_move(top_card) and CARD_VALUES.index(card.get_value()) + 1 == CARD_VALUES.index(top_card.get_value()) + 1:
+                    if card.get_suit() == top_card.get_suit() and CARD_VALUES.index(card.get_value()) == CARD_VALUES.index(top_card.get_value()) + 1:
                         for card in self.held_cards:
                             self.move_card_to_new_pile(card, pile_index)
                             reset_position = False
