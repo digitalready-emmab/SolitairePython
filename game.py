@@ -95,6 +95,7 @@ class Card(arcade.Sprite):
         self.texture = arcade.load_texture(self.image_file_name)
         self.is_face_up = True
 
+    ## METHODS BY US
     def get_suit(self):
         return self.suit
     def get_value(self):
